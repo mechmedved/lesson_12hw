@@ -57,6 +57,18 @@ public class Coin implements Comparable<Coin>{
 
     @Override
     public int compareTo(Coin o) {
-        return o.cost - this.cost;
+        if(!o.cost.equals(this.cost)) {
+            return o.cost - this.cost;
+        }
+        if (!o.diameter.equals(this.diameter)) {
+            return (int) (o.diameter - this.diameter);
+        }
+        if (!o.country.equals(this.country)) {
+            return this.country.compareTo(o.country);
+        }
+        if (!o.value.equals(this.value)) {
+            return o.value - this.value;
+        }
+        return 0;
     }
 }
