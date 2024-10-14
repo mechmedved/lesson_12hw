@@ -66,9 +66,7 @@ public class Coin implements Comparable<Coin>{
         if (!o.country.equals(this.country)) {
             return this.country.compareTo(o.country);
         }
-        if (!o.value.equals(this.value)) {
-            return o.value - this.value;
-        }
-        return 0;
+
+        return o.value - this.value;
     }
 }
